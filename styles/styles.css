@@ -1,0 +1,140 @@
+:root {
+    --dark: rgb(23, 17, 40);
+    --orange: rgb(255, 115, 0);
+    --lightorange: rgb(234, 146, 74);
+}
+
+body {
+    background-color: var(--dark);
+    font-family: 'Monaco', 'Ariel', Serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: var(--orange);
+    font-size: 15px;
+    color: var(--orange);
+    padding: 10px;
+}
+/* Select Box */
+header .select {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Plus button hover effect */
+header .select button:hover {
+    color: var(--lightorange);
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Content inside the Select Box */
+header .select #menu {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--dark);
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+/* Change color when clicked on */
+header .select #menu:focus {
+    outline: none;
+    border-color: var(--lightorange); /* Slightly lighter border for focus */
+}
+
+/* Quote Gallery Section */
+#main {
+    min-height: 80vh;
+    padding: 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+
+.quote {
+    position: relative;
+    background-color: var(--dark);
+    padding: .6rem 1rem;
+    border-radius: .6rem;
+    transition: all .22s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: var(--orange);
+    min-height: 32rem;
+}
+
+.quote > button {
+    position: absolute;
+    padding: .2rem .3rem .4rem .6rem;
+    right: .5rem;
+    top: 0;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: var(--orange);   
+    opacity: .75;
+}
+
+.quote > button:hover {
+    opacity: 1;
+}
+
+.quote figure {
+    margin: 3rem 1rem .5rem 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+blockquote {
+    font-family: 'Monaco';
+    font-size: 2.4rem;
+    color: var(--orange);
+    margin-bottom: 1.2rem;
+}
+
+.quote figcaption {
+    text-align: right;
+    font-size: 1.2rem;
+    margin: 0rem, 1rem 0 0;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: var(--orange);
+    font-style: italic;
+}
+
+.quote figcaption img {
+    width: 100px;
+    height: auto;
+    margin-left: auto; 
+}
+
+.character {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+
+.character::before {
+    content: '\2014'; 
+    color: var(--orange);
+}
+
+.quote > footer {
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    margin: .5rem 0 0 0;
+    color: var(--orange);
+    opacity: 0.5;
+}

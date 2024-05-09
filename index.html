@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles/simple.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <img src="quotesicon.png" alt="logo" width="75" height="75">
+        <h1>Quote Machine</h1>
+        <div class="select">
+            <select name="menu" id="menu">
+                <option value="Yoda">Yoda</option>
+                <option value="Kenobi">Kenobi</option>
+                <option value="Palpatine">Palpatine</option>
+                <option value="Dooku">Dooku</option>
+            </select>
+            <button onclick=addQuote()>
+                <img src="plus.svg" alt="plussymbol">
+            </button>
+        </div>
+    </header>
+    <main id="main">
+        <!-- quotes go here -->
+    </main>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/logic.js"></script>
+</body>
+</html>
+
